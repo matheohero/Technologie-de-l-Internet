@@ -11,15 +11,14 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
   $valueError = connection($email,$password);
 
   if (!$valueError){
-    // TODO redirect user to their home page
+    header("Location: index.php?action=home");
   } else {
     // TODO show invalid field
   }
-
 } 
 
 
-require '../views/auth.php';
-require '../views/footer.php';
+require '../Views/auth.php';
+require '../Views/footer.php';
 
 ?>
