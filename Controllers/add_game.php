@@ -16,7 +16,7 @@ if (isset($_POST['idJeux'])) {
   addToLibrary($_SESSION['id_user'],$_POST['idJeux']);
 }
 
-  require './views/header.php';
-  require './views/add_game.php';
-  require './views/footer.php';
+  require './Views/header.php';
+  require './Views/add_game.php';
+  require './Views/footer.php';
 ?>

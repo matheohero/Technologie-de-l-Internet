@@ -26,11 +26,8 @@ if (isset($_POST['delete-game'])) {
 
 }
 
-
-
-
-require './views/header.php';
-require './views/update_game.php';
-require './views/footer.php';
+require './Views/header.php';
+require './Views/update_game.php';
+require './Views/footer.php';
 
 ?>

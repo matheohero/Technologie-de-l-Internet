@@ -37,8 +37,8 @@ if(isset($_POST["name"]) && isset($_POST["editor"]) && isset($_POST["release-dat
   }
 
 }
-require './views/header.php';
-require './views/add_game_form.php';
-require './views/footer.php';
+require './Views/header.php';
+require './Views/add_game_form.php';
+require './Views/footer.php';
 
 ?>
