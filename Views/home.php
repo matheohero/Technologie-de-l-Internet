@@ -18,7 +18,7 @@
       <?php
       foreach($listeJeu as $jeu){ 
         ?>
-        <a href='update_game?IdGame=<?php echo $jeu["id_jeux"]?>'>
+        <a href='?action=update_game&IdGame=<?php echo $jeu["id_jeux"]?>'>
         <div class="game" style="background: linear-gradient(
           0deg,
           rgba(0, 0, 0, 0.94) 11%,
