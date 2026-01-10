@@ -2,10 +2,10 @@
 
 if (isset($_GET['action'])) {
   if ($_GET['action'] == 'home') {
-    require 'controllers/home.php';
+    require './Controllers/home.php';
   }
 } else {
-  require 'controllers/auth.php';
+  require './Controllers/auth.php';
 } 
 
 ?>

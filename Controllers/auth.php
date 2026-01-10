@@ -1,5 +1,5 @@
 <?php
-require '../Models/user.php';
+require './Models/user.php';
 
 $valueError = 0;
 
@@ -18,7 +18,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
 } 
 
 
-require '../Views/auth.php';
-require '../Views/footer.php';
+require './Views/auth.php';
+require './Views/footer.php';
 
 ?>

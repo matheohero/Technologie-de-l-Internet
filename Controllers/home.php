@@ -1,6 +1,6 @@
 <?php
 
-require '../Models/jeu.php';
+require './Models/jeu.php';
 
 $listeJeu = array();
 
@@ -11,8 +11,8 @@ if (isset($_SESSION)){
     $listeJeu = displayGame($_SESSION["id_user"]);
 }
 
-require '../Views/header.php';
-require '../Views/home.php';
-require '../Views/footer.php';
+require './Views/header.php';
+require './Views/home.php';
+require './Views/footer.php';
 
 ?>

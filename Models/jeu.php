@@ -1,10 +1,17 @@
 <?php
 
 function dbConnect(){
+    // TODO : use an .env to change thoses value
+    /*
     $host = $_ENV['HOST'];
     $dbname = $_ENV['DBNAME'];
     $user = $_ENV['USER'];
     $password = $_ENV['PASSWORD'];
+    */
+    $host = "localhost";
+    $dbname = "game_collection";
+    $user = "root";
+    $password = "";
     $bdd = new PDO('mysql:host='.$host.';dbname='.$dbname,$user,$password);
     return $bdd;
  }
