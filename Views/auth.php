@@ -27,7 +27,7 @@
       </div>
      
     </form>
-    <a href="register">S'inscrire</a>
+    <a href="?action=register">S'inscrire</a>
   </div>
 </body>
 </html>
