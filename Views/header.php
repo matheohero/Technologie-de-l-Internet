@@ -12,7 +12,6 @@
   <ul class="nav-links">
     <li><a href="?action=home">Ma bibliothèque</a></li>
     <li><a href="?action=add_game">Ajouter un jeu</a></li>
-    <li><a href="?action=classification">Classement</a></li>
     <li><a href="?action=profile">Profil</a></li>
   </ul>
 </nav>

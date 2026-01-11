@@ -10,6 +10,7 @@
   <form class="search-game">
     <div class="search">
       <label for="name">Ajouter un jeu à la bibliothèque</label>
+      <input type="hidden" name="action" value="add_game">
       <input type="text" name="name" id="name" placeholder="Rechercher un jeu">
     </div>
     <div class="submit">
