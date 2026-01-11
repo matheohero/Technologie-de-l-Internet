@@ -13,7 +13,15 @@ function dbConnect(){
     $user = "root";
     $password = "";
 
-    $bdd = new PDO('mysql:host='.$host.';dbname='.$dbname,$user,$password);
+    try {
+        $bdd = new PDO('mysql:host='.$host.';dbname='.$dbname,$user,$password);
+    } catch (PDOException $e) {
+        // créer la base de données
+        $bdd = new PDO('mysql:host='.$host,$user,$password);
+        $sql = file_get_contents('./assets/data/BDD.sql');
+        $qr = $bdd->exec($sql);
+    }
+
     return $bdd;
  }
 

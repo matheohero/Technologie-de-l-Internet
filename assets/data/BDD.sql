@@ -49,5 +49,5 @@ INSERT INTO JEUX(`id_jeux`, `nom_jeux`, `editeur_jeux`, `date_sorite`, `nom_plat
 ;
 
 INSERT INTO BILIOTEQUE VALUES
-   ('0','2','124'),
+   ('0','2','124')
 ;
