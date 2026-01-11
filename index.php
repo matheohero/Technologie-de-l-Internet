@@ -21,7 +21,14 @@ if (isset($_GET['action'])) {
     header('Location: index.php');
   }
 } else {
-  require './Controllers/auth.php';
+  session_start();
+  if (isset($_SESSION['id_user'])) {
+    session_abort();
+    require './Controllers/home.php';
+  } else {
+    session_abort();
+    require './Controllers/auth.php';
+  }
 } 
 
 ?>
