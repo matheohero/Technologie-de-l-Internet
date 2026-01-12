@@ -40,4 +40,9 @@ PS : la BDD se créer automatiquement si elle n'est pas présente
 Les outils basiques du web ont été utilisés : CSS / PHP.
 Néanmoins le projet est construit sous le modèle MVC
 
+## 5 Problème présents
+
+- La mise à jour du profile nécéssite la déconexion
+- Il manques la mise en évidence des champs incorrecte dans chaque formulaire
+- Les identifiants de connexion à la BDD ne sont pas pas le .env
 
