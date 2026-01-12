@@ -13,7 +13,6 @@ footer {
   background-color: #211f2a;
 }
 
-/* Responsive Design Media Queries */
 
 /* Tablet (768px to 1024px) */
 @media screen and (max-width: 1024px) and (min-width: 769px) {
