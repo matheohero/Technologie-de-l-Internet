@@ -27,7 +27,7 @@
       </form>
     </div>
     <div class="img">
-      <img src="<?php echo $game['img_jeux']?>" style="width:200px;" alt="Red Dead Redemption">
+      <img src="<?php echo $game['img_jeux']?>" style="width:600px; height:auto;" alt="Jeux image"/>
     </div>
 
   </div>
