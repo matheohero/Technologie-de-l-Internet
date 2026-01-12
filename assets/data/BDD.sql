@@ -24,6 +24,7 @@ CREATE TABLE JEUX(
    img_jeux VARCHAR(200),
    desc_jeux VARCHAR(500) NOT NULL,
    url_site_jeux VARCHAR(200),
+   url_video_jeux VARCHAR(200),
    PRIMARY KEY(id_jeux)
 );
 
@@ -41,13 +42,16 @@ INSERT INTO UTILISATEUR VALUES
    ('0','test','test@test.test','03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4','TEST')
 ;
 
-INSERT INTO JEUX(`id_jeux`, `nom_jeux`, `editeur_jeux`, `date_sorite`, `nom_plateformes`, `img_jeux`, `desc_jeux`, `url_site_jeux`)  VALUES
-   ('0','Read Dead Redemption','Rockstar','2010-05-21','Nintendo,PlayStation,Xbox,','https://imgix.bustle.com/inverse/16/f3/df/c4/874e/4810/8715/d64ccb4a70da/ledejpg.jpeg?w=400&h=300&fit=crop&crop=faces&auto=format%2Ccompress','Un jeux d aventure dans un monde ouvert',NULL),
-   ('1','Read Dead Redemption 2','Rockstar','2018-10-26','PlayStation,Xbox,PC,','https://store-images.s-microsoft.com/image/apps.58752.13942869738016799.078aba97-2f28-440f-97b6-b852e1af307a.95fdf1a1-efd6-4938-8100-8abae91695d6?q=90&w=480&h=270','Un jeux d aventure dans un monde ouvert',NULL),
-   ('2','Zelda BOTW','Nintendo','2017-04-03','Nintendo,','https://zelda.nintendo.com/breath-of-the-wild/assets/icons/BOTW-Share_icon.jpg','Dernier Zelda sortie un banger',NULL),
-   ('3','GTA 5','Rockstar','2013-09-17','PlayStation,Xbox,PC,','https://cdn1.epicgames.com/0584d2013f0149a791e7b9bad0eec102/offer/GTAV_EGS_Artwork_2560x1440_Landscaped%20Store-2560x1440-79155f950f32c9790073feaccae570fb.jpg','Un GTA asser clasique mais qui fait le taf',NULL)
+INSERT INTO JEUX(`id_jeux`, `nom_jeux`, `editeur_jeux`, `date_sorite`, `nom_plateformes`, `img_jeux`, `desc_jeux`, `url_site_jeux`, `url_video_jeux`)  VALUES
+   ('0','Read Dead Redemption','Rockstar','2010-05-21','Nintendo,PlayStation,Xbox,','https://imgix.bustle.com/inverse/16/f3/df/c4/874e/4810/8715/d64ccb4a70da/ledejpg.jpeg?w=400&h=300&fit=crop&crop=faces&auto=format%2Ccompress','Un jeux d aventure dans un monde ouvert',NULL,NULL),
+   ('1','Read Dead Redemption 2','Rockstar','2018-10-26','PlayStation,Xbox,PC,','https://store-images.s-microsoft.com/image/apps.58752.13942869738016799.078aba97-2f28-440f-97b6-b852e1af307a.95fdf1a1-efd6-4938-8100-8abae91695d6?q=90&w=480&h=270','Un jeux d aventure dans un monde ouvert',NULL,NULL),
+   ('2','Zelda BOTW','Nintendo','2017-04-03','Nintendo,','https://zelda.nintendo.com/breath-of-the-wild/assets/icons/BOTW-Share_icon.jpg','Zelda BOTW un banger',NULL,'https://www.youtube.com/embed/zw47_q9wbBE?si=D-iyoNoEPUspKTRj'),
+   ('3','GTA 5','Rockstar','2013-09-17','PlayStation,Xbox,PC,','https://cdn1.epicgames.com/0584d2013f0149a791e7b9bad0eec102/offer/GTAV_EGS_Artwork_2560x1440_Landscaped%20Store-2560x1440-79155f950f32c9790073feaccae570fb.jpg','Un GTA asser clasique mais qui fait le taf',NULL,NULL),
+   ('4','BG3','Larian Studios','2023-08-03','PC,','https://image.api.playstation.com/vulcan/ap/rnd/202302/2321/ba706e54d68d10a0eb6ab7c36cdad9178c58b7fb7bb03d28.png?w=620&thumb=false', 'Le meilleur RPG de ces dernieres annees',NULL ,'https://www.youtube.com/embed/Bk2AqXsJsWU?si=bqPRftKzmGKP9FnN')
 ;
 
 INSERT INTO BILIOTEQUE VALUES
    ('0','2','124')
 ;
+
+CREATE PROCEDURE `tempTotal`(IN `id_user` VARCHAR(50)) NOT DETERMINISTIC CONTAINS SQL SQL SECURITY DEFINER SELECT SUM(bilioteque.temp_jeux) AS 'tps' FROM bilioteque WHERE bilioteque.id_user = id_user;

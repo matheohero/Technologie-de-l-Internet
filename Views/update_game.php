@@ -27,7 +27,14 @@
       </form>
     </div>
     <div class="img">
-      <img src="<?php echo $game['img_jeux']?>" style="width:200px;" alt="Red Dead Redemption">
+      <iframe width="560" height="315" src="<?php echo $game['url_video_jeux']?>" 
+        title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>
+    </div>
+    <div class="img">
+      <img src="<?php echo $game['img_jeux']?>" style="width:600px; height:auto;" alt="Jeux image"/>
     </div>
 
   </div>

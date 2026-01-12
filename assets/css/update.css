@@ -57,3 +57,80 @@ label {
   height: 100%;
   object-fit: cover;
 }
+
+/* Responsive Design Media Queries */
+
+/* Tablet (768px to 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .game_update {
+    flex-direction: column;
+    margin: 5% 30px;
+  }
+
+  .game_update p,
+  h1,
+  h2,
+  label {
+    font-size: 14px;
+  }
+
+  .modify-time input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .add-game,
+  .delete-game {
+    width: 48%;
+    margin-right: 2%;
+  }
+}
+
+/* Smartphone (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  body {
+    background-color: #211f2a;
+  }
+
+  .game_update {
+    flex-direction: column;
+    margin: 5% 10px;
+  }
+
+  .game_update p,
+  h1,
+  h2,
+  label {
+    color: #fff;
+    font-size: 12px;
+  }
+
+  .game_update p {
+    font-size: 11px;
+  }
+
+  .modify-time {
+    width: 100%;
+  }
+
+  .modify-time input {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+    height: 40px;
+  }
+
+  .add-game,
+  .delete-game {
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  .game_update img {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 15px;
+  }
+}
