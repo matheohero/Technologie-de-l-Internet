@@ -14,6 +14,9 @@
   </div>
   <div class="games">
     <p id="title-game">Mes jeux</p>
+    <div>
+      <p>Temps de jeux total : <?php echo getTotalTimePlayed($_SESSION['id_user']); ?> h</p>
+    </div>
     <div class="container-games">
       <?php
       foreach($listeJeu as $jeu){ 

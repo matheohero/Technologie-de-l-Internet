@@ -53,3 +53,5 @@ INSERT INTO JEUX(`id_jeux`, `nom_jeux`, `editeur_jeux`, `date_sorite`, `nom_plat
 INSERT INTO BILIOTEQUE VALUES
    ('0','2','124')
 ;
+
+CREATE PROCEDURE `tempTotal`(IN `id_user` VARCHAR(50)) NOT DETERMINISTIC CONTAINS SQL SQL SECURITY DEFINER SELECT SUM(bilioteque.temp_jeux) AS 'tps' FROM bilioteque WHERE bilioteque.id_user = id_user;

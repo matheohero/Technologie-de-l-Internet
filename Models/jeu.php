@@ -146,4 +146,16 @@ function deleteGameFromLibrary($idGame,$idUser) {
 
     $query -> execute();
 }
+
+function getTotalTimePlayed($idUser) {
+    $bdd = dbConnect();
+
+    $query = $bdd -> prepare('CALL `tempTotal`(?);');
+    $query -> execute(array($idUser));
+
+    $result = $query->fetchAll(PDO::FETCH_ASSOC);   
+
+    return $result[0]["tps"];
+}
+
 ?>
