@@ -12,3 +12,22 @@ footer {
   justify-content: center;
   background-color: #211f2a;
 }
+
+/* Responsive Design Media Queries */
+
+/* Tablet (768px to 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  footer {
+    height: 100px;
+    padding: 15px;
+  }
+}
+
+/* Smartphone (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  footer {
+    height: auto;
+    padding: 20px 10px;
+    font-size: 12px;
+  }
+}

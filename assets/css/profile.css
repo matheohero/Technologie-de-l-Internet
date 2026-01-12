@@ -43,3 +43,63 @@ h1 {
   font-size: 13px;
   color: #ff0000;
 }
+
+/* Responsive Design Media Queries */
+
+/* Tablet (768px to 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .container {
+    margin: 5% 5%;
+  }
+
+  .input input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .submit {
+    width: 120px;
+  }
+
+  .error {
+    width: 90%;
+  }
+}
+
+/* Smartphone (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 5% 10px;
+    padding: 0 10px;
+  }
+
+  .input {
+    margin-bottom: 10px;
+  }
+
+  .input input {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+    height: 40px;
+  }
+
+  .input label,
+  h1,
+  h2 {
+    font-size: 14px;
+  }
+
+  .submit {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 12px;
+  }
+
+  .error {
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 12px;
+    box-sizing: border-box;
+  }
+}
