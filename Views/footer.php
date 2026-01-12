@@ -6,6 +6,6 @@
   <link rel="stylesheet" href="assets/css/footer.css" />
 </head>
 <footer>
-  Game Collection - 2025 - Tous droits réservés
+  Game Collection - 2026 - Tous droits réservés
 </footer>
 </html>
